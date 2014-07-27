@@ -47,13 +47,17 @@ public class DemoWallpaperService extends WallpaperService {
 		    	 Paint p = new Paint();
 		    	 p.setTextSize(70);
 		 		 p.setAntiAlias(true);
-		 		android:background="@drawable/bg";
+		 		
 		 		 String text = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
 		         float w = p.measureText(text, 0, text.length());
 		         int offset = (int) w / 2;
 				 int x = c.getWidth()/2 - offset;
 		         int y = c.getHeight()/2;
-		         c.drawRect(0, 0, c.getWidth(), c.getHeight(), p);
+				 //this will put the image at the background
+				 
+				  Bitmap myImg = BitmapFactory.decodeResource(getResources(), R.drawable.bg);
+				  c.drawBitmap(myImg, 0, 0, null);
+				  
 		         p.setColor(mColor);
 		         p.setAlpha(mAlpha);
 		         c.drawText(text, x, y, p);
