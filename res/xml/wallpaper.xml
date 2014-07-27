@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wallpaper 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:thumbnail="@drawable/icon"
+	android:background="@drawable/bg"
+	android:description="@string/app_name"
+	android:settingsActivity="com.authorwjf.live_wallpaper_p2.WallpaperPrefsActivity"/>
+	
+
+
+	
